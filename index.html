@@ -34,7 +34,7 @@
                         console.log('My ID is' + response.id);
                     });
 
-
+/*
                     FB.ui({
                         method: 'share',
                         href: 'https://kangw3n.github.io/facebook/',
@@ -57,14 +57,14 @@
 					FB.api('/me/picture?type=normal', function(response) { // normal/large/squere 
 						var str="<img src="+ response.data.url +">";
 						$('body').append(str);
-					});
+					});*/
 					
 					
 					
 					FB.api('/me/photos', 'post', {
-						name: 'this is a new photo',
-						message: 'this is parse photo',
-						url: "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1511521_754800717873177_574537551_n.jpg"
+						'name': 'this is a new photo',
+						'message'': 'this is parse photo',
+						'url': "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1511521_754800717873177_574537551_n.jpg"
 					}, function (response) {
 						if (!response || response.error) {
 							alert('Error occured:' + response);
